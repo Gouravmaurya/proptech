@@ -1,0 +1,441 @@
+﻿
+> haven@0.1.0 lint
+> eslint
+
+
+D:\Coding\Assignment projects\haven\list-enriched.ts
+  12:9   error    'found' is never reassigned. Use 'const' instead  prefer-const
+  21:18  warning  'e' is defined but never used                     @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\resting\test_scout.ts
+    8:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   73:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  141:50  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\scripts\test-zillow-api.mjs
+  60:11  warning  'location' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\app\actions\ai.ts
+   20:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   25:22  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+   93:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  112:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  115:74  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  173:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\actions\dashboard.ts
+    9:30   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  122:26   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  130:93   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  145:100  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  171:32   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  176:53   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  177:42   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  197:51   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  232:19   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  271:26   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  302:43   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  319:26   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  320:31   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  320:55   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  339:22   warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  366:21   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  434:95   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\actions\dream-house.ts
+    6:93  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+   44:56  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+   61:13  error  'sortedProperties' is never reassigned. Use 'const' instead  prefer-const
+   61:58  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+   61:66  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+   65:30  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+   76:28  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+   89:56  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  128:21  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\actions\outreach.ts
+  59:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  70:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  90:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\actions\user.ts
+   61:56  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  234:29  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  236:78  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\app\api\agents\communication\route.ts
+  61:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\agents\coordinator\route.ts
+  24:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\agents\diligence\route.ts
+  39:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\agents\scout\route.ts
+  30:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\agents\underwriting\route.ts
+  109:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\auth\register\route.ts
+  35:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\db-stats\route.ts
+  56:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\leads\[id]\route.ts
+  19:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\test-auth\route.ts
+  8:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\test-db.ts
+  29:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\api\virtual-staging\route.ts
+  144:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\auth\login\page.tsx
+    5:10  warning  'motion' is defined but never used                               @typescript-eslint/no-unused-vars
+   35:18  warning  'err' is defined but never used                                  @typescript-eslint/no-unused-vars
+  165:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\Coding\Assignment projects\haven\src\app\auth\register\page.tsx
+   39:23  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  175:45  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  175:60  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+D:\Coding\Assignment projects\haven\src\app\dashboard\page.tsx
+  15:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+D:\Coding\Assignment projects\haven\src\app\dashboard\page.tsx:15:9
+  13 |         const city = searchParams.get("city") || "";
+  14 |         const state = searchParams.get("state") || "";
+> 15 |         setSearchQuery([city, state].filter(Boolean).join(", "));
+     |         ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |     }, [searchParams]);
+  17 |
+  18 |     return (  react-hooks/set-state-in-effect
+
+D:\Coding\Assignment projects\haven\src\app\dashboard\saved\page.tsx
+  18:30  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  44:49  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\dashboard\settings\page.tsx
+  2:10  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\app\page.tsx
+  3:8  warning  'LogoCloud' is defined but never used     @typescript-eslint/no-unused-vars
+  6:8  warning  'Stats' is defined but never used         @typescript-eslint/no-unused-vars
+  8:8  warning  'Testimonials' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\app\properties\[id]\page.tsx
+    9:29  warning  'XCircle' is defined but never used                                                                 @typescript-eslint/no-unused-vars
+   10:46  warning  'ExternalLink' is defined but never used                                                            @typescript-eslint/no-unused-vars
+   10:87  warning  'Tag' is defined but never used                                                                     @typescript-eslint/no-unused-vars
+   11:88  warning  'TrendingDown' is defined but never used                                                            @typescript-eslint/no-unused-vars
+   12:12  warning  'Mail' is defined but never used                                                                    @typescript-eslint/no-unused-vars
+   12:18  warning  'User' is defined but never used                                                                    @typescript-eslint/no-unused-vars
+   19:10  warning  'getLead' is defined but never used                                                                 @typescript-eslint/no-unused-vars
+   23:5   warning  'LineChart' is defined but never used                                                               @typescript-eslint/no-unused-vars
+   23:16  warning  'Line' is defined but never used                                                                    @typescript-eslint/no-unused-vars
+   23:98  warning  'Legend' is defined but never used                                                                  @typescript-eslint/no-unused-vars
+   33:38  error    Unexpected any. Specify a different type                                                            @typescript-eslint/no-explicit-any
+   40:56  error    Unexpected any. Specify a different type                                                            @typescript-eslint/no-explicit-any
+  106:36  error    Unexpected any. Specify a different type                                                            @typescript-eslint/no-explicit-any
+  152:32  error    Unexpected any. Specify a different type                                                            @typescript-eslint/no-explicit-any
+  192:8   warning  React Hook useMemo has a missing dependency: 'p'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  205:8   warning  React Hook useMemo has a missing dependency: 'p'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  221:22  warning  'e' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+  723:77  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                     react/no-unescaped-entities
+
+D:\Coding\Assignment projects\haven\src\app\test\(dashboard)\propertydetails\[id]\page.tsx
+   5:100  warning  'ShieldCheck' is defined but never used   @typescript-eslint/no-unused-vars
+  13:36   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  42:85   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\app\test\(dashboard)\propertylist\page.tsx
+  79:94  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\Coding\Assignment projects\haven\src\auth.config.ts
+  29:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  53:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  60:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\components\BeforeAfterSlider.tsx
+  57:8   warning  React Hook useEffect has a missing dependency: 'resize'. Either include it or remove the dependency array                                                                                                                                                                                react-hooks/exhaustive-deps
+  67:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  78:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+D:\Coding\Assignment projects\haven\src\components\DreamHouseMatcher.tsx
+    7:8   warning  'Image' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   18:44  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   84:23  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  141:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  293:61  warning  'idx' is defined but never used                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\components\PropertyCard.tsx
+  22:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\components\VirtualStaging.tsx
+  202:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\AgentCommunication.tsx
+   4:18  warning  'AnimatePresence' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  16:46  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  23:9   error    Error: Cannot access variable before it is declared
+
+`loadOutreach` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\AgentCommunication.tsx:23:9
+  21 |
+  22 |     useEffect(() => {
+> 23 |         loadOutreach();
+     |         ^^^^^^^^^^^^ `loadOutreach` accessed before it is declared
+  24 |     }, [leadId]);
+  25 |
+  26 |     async function loadOutreach() {
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\AgentCommunication.tsx:26:5
+  24 |     }, [leadId]);
+  25 |
+> 26 |     async function loadOutreach() {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         setLoading(true);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |         const data = await getOutreachForLead(leadId);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |         setOutreach(data);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |         setLoading(false);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |     }
+     | ^^^^^^ `loadOutreach` is declared here
+  32 |
+  33 |     async function handleGenerate() {
+  34 |         setIsGenerating(true);  react-hooks/immutability
+  24:8   warning  React Hook useEffect has a missing dependency: 'loadOutreach'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\DashboardContent.tsx
+   9:20  warning  'useRef' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  12:7   warning  'stats' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  33:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\DashboardContent.tsx:33:9
+  31 |
+  32 |     useEffect(() => {
+> 33 |         setSearchState(prev => ({ ...prev, query: externalQuery || "" }));
+     |         ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  34 |     }, [externalQuery]);
+  35 |
+  36 |     if (status === "loading") return null;  react-hooks/set-state-in-effect
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\DashboardHeader.tsx
+   3:10  warning  'Search' is defined but never used                  @typescript-eslint/no-unused-vars
+   3:18  warning  'Bell' is defined but never used                    @typescript-eslint/no-unused-vars
+   3:24  warning  'ArrowRight' is defined but never used              @typescript-eslint/no-unused-vars
+  17:24  warning  'setInputValue' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  26:11  warning  'handleKeyDown' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\PropertyFeed.tsx
+   4:10  warning  'Loader2' is defined but never used                 @typescript-eslint/no-unused-vars
+   6:8   warning  'Link' is defined but never used                    @typescript-eslint/no-unused-vars
+  23:50  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  29:24  warning  'setTypeFilter' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\SettingsClient.tsx
+   12:5    warning  'CreditCard' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+  162:57   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  282:186  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  282:197  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+D:\Coding\Assignment projects\haven\src\components\dashboard\Sidebar.tsx
+   5:16  warning  'Compass' is defined but never used           @typescript-eslint/no-unused-vars
+   5:66  warning  'ChevronRight' is defined but never used      @typescript-eslint/no-unused-vars
+  25:19  warning  'session' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\components\landing\CallToAction.tsx
+  5:10  warning  'Sparkles' is defined but never used    @typescript-eslint/no-unused-vars
+  5:20  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\components\landing\Features.tsx
+  319:39  error  React Hook "useTransform" cannot be called inside a callback. React Hooks must be called in a React function component or a custom React Hook function  react-hooks/rules-of-hooks
+
+D:\Coding\Assignment projects\haven\src\components\landing\Hero.tsx
+   3:39   warning  'useCallback' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+   6:63   warning  'BarChart3' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+  80:129  warning  React Hook useEffect has a missing dependency: 'items.length'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\Coding\Assignment projects\haven\src\components\landing\test\BentoFeatures.tsx
+   4:30  warning  'TrendingUp' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+  40:49  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+D:\Coding\Assignment projects\haven\src\components\landing\test\DreamHomeGallery.tsx
+   4:25   warning  'Sparkles' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  53:101  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  75:33   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  97:45   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  97:57   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+D:\Coding\Assignment projects\haven\src\components\landing\test\PhilosophySection.tsx
+  111:41  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+D:\Coding\Assignment projects\haven\src\components\landing\test\SanctuaryHero.tsx
+  14:11  warning  The 'videoRefs' array makes the dependencies of useCallback Hook (at line 31) change on every render. To fix this, wrap the initialization of 'videoRefs' in its own useMemo() Hook                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+  23:9   error    Error: This value cannot be modified
+
+Modifying a value previously passed as an argument to a hook is not allowed. Consider moving the modification before calling the hook.
+
+D:\Coding\Assignment projects\haven\src\components\landing\test\SanctuaryHero.tsx:23:9
+  21 |
+  22 |         setTransitioning(true);
+> 23 |         nextRef.currentTime = 0;
+     |         ^^^^^^^ `videoRefs` cannot be modified
+  24 |         nextRef.play().catch(() => { });
+  25 |
+  26 |         // Short delay so next video has started playing before we reveal it  react-hooks/immutability
+  41:8   warning  React Hook useEffect has a missing dependency: 'videoRefs'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                 react-hooks/exhaustive-deps
+
+D:\Coding\Assignment projects\haven\src\components\property\NearbySchools.tsx
+  4:49  warning  'SchoolIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\components\property\PropertyHistory.tsx
+  4:10  warning  'History' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\components\test\PropertyGrid.tsx
+  3:10  warning  'motion' is defined but never used        @typescript-eslint/no-unused-vars
+  6:68  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\components\ui\AuthRequiredModal.tsx
+  21:13  error  Error: This value cannot be modified
+
+Modifying a variable defined outside a component or hook is not allowed. Consider using an effect.
+
+D:\Coding\Assignment projects\haven\src\components\ui\AuthRequiredModal.tsx:21:13
+  19 |     if (typeof window !== "undefined") {
+  20 |         if (isOpen) {
+> 21 |             document.body.style.overflow = "hidden";
+     |             ^^^^^^^^^^^^^^^^^^^ value cannot be modified
+  22 |         } else {
+  23 |             document.body.style.overflow = "unset";
+  24 |         }  react-hooks/immutability
+  23:13  error  Error: This value cannot be modified
+
+Modifying a variable defined outside a component or hook is not allowed. Consider using an effect.
+
+D:\Coding\Assignment projects\haven\src\components\ui\AuthRequiredModal.tsx:23:13
+  21 |             document.body.style.overflow = "hidden";
+  22 |         } else {
+> 23 |             document.body.style.overflow = "unset";
+     |             ^^^^^^^^^^^^^^^^^^^ value cannot be modified
+  24 |         }
+  25 |     }
+  26 |                                                           react-hooks/immutability
+
+D:\Coding\Assignment projects\haven\src\components\ui\GatedSection.tsx
+  20:5  warning  'blurIntensity' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+  27:9  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+D:\Coding\Assignment projects\haven\src\components\ui\GatedSection.tsx:27:9
+  25 |
+  26 |     useEffect(() => {
+> 27 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  28 |     }, []);
+  29 |
+  30 |     // Prevent hydration mismatch by not rendering the gate until mounted  react-hooks/set-state-in-effect
+
+D:\Coding\Assignment projects\haven\src\components\ui\SearchCapsule.tsx
+  3:10  warning  'useEffect' is defined but never used        @typescript-eslint/no-unused-vars
+  3:21  warning  'useRef' is defined but never used           @typescript-eslint/no-unused-vars
+  4:18  warning  'AnimatePresence' is defined but never used  @typescript-eslint/no-unused-vars
+  5:18  warning  'ChevronDown' is defined but never used      @typescript-eslint/no-unused-vars
+  5:31  warning  'Check' is defined but never used            @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\lib\ai-engine.ts
+   94:53  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+   94:73  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  104:17  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  114:44  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  136:35  warning  'goal' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  248:59  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\lib\prisma.ts
+  8:5  warning  Unused eslint-disable directive (no problems were reported from 'no-var')
+
+D:\Coding\Assignment projects\haven\src\lib\property-parser.ts
+  22:53  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  30:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  42:51  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  50:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  66:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  74:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\lib\scout-agent.ts
+   50:26  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+   59:25  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+   61:11  warning  'location' is assigned a value but never used       @typescript-eslint/no-unused-vars
+   69:26  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  126:90  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  138:13  error    'headers' is never reassigned. Use 'const' instead  prefer-const
+  151:28  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  223:23  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  265:52  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  291:14  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  302:27  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  397:11  warning  'host' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  415:87  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  428:54  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  432:18  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  462:31  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  491:42  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  701:21  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  784:95  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  807:99  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  863:17  error    Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\scripts\check-property.ts
+   2:66  warning  'project10Years' is defined but never used  @typescript-eslint/no-unused-vars
+  28:28  error    Unexpected any. Specify a different type    @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\src\scripts\test-calc.ts
+  1:66  warning  'project10Years' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\src\scripts\test-dream-dedup.ts
+  22:52  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  29:9   error  'sortedProperties' is never reassigned. Use 'const' instead  prefer-const
+  29:54  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  29:62  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  33:26  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  44:24  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  53:52  error  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+
+D:\Coding\Assignment projects\haven\test-all-raw-data.ts
+  13:9   error    'total' is never reassigned. Use 'const' instead  prefer-const
+  25:18  warning  'e' is defined but never used                     @typescript-eslint/no-unused-vars
+
+D:\Coding\Assignment projects\haven\test-getlead.ts
+  29:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 203 problems (125 errors, 78 warnings)
+  5 errors and 1 warning potentially fixable with the `--fix` option.
+

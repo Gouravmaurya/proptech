@@ -1,0 +1,183 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Property {
+  id               String          @id @default(cuid())
+  sourceId         String          @unique
+  title            String
+  description      String?
+  type             String?
+  category         String?
+  status           String?
+  address          String?
+  city             String?
+  state            String?
+  zip              String?
+  country          String?
+  geoLocation      String?
+  price            Float           @default(0)
+  sqft             Float?
+  bedrooms         Int?
+  bathrooms        Int?
+  yearBuilt        Int?
+  lotArea          Float?
+  lotAreaUnit      String?
+  daysOnMarket     Int?
+  taxAssessedValue Float?
+  zestimate        Float?
+  detailUrl        String?
+  openHouseInfo    String?
+  rentEstimate     Float?
+  financials       String?
+  imageUrl         String?
+  images           String?
+  amenities        String?
+  rawData          String?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+  leads            Lead[]
+  savedBy          SavedProperty[]
+
+  @@index([city])
+  @@index([state])
+}
+
+model SavedProperty {
+  id         String   @id @default(cuid())
+  userId     String
+  propertyId String
+  createdAt  DateTime @default(now())
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, propertyId])
+}
+
+model Lead {
+  id           String            @id @default(cuid())
+  sourceId     String?
+  title        String
+  price        Float
+  location     String?
+  score        Float?
+  tier         String?
+  reasons      String?
+  status       String            @default("new")
+  propertyData String?
+  userId       String?
+  propertyId   String?
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+  analyses     Analysis[]
+  diligence    DiligenceReport[]
+  property     Property?         @relation(fields: [propertyId], references: [id])
+  outreach     Outreach[]
+
+  @@index([location])
+  @@index([createdAt])
+  @@index([propertyId])
+  @@index([userId])
+}
+
+model Analysis {
+  id               String   @id @default(cuid())
+  leadId           String
+  verdict          String?
+  score            Float?
+  financials       String?
+  aiRecommendation String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  lead             Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+}
+
+model Outreach {
+  id         String   @id @default(cuid())
+  leadId     String
+  analysisId String?
+  channel    String   @default("email")
+  subject    String?
+  body       String?
+  status     String   @default("drafted")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  lead       Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+}
+
+model DiligenceReport {
+  id        String   @id @default(cuid())
+  leadId    String
+  title     String
+  summary   String?
+  flags     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lead      Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id                  String          @id @default(cuid())
+  name                String?
+  email               String          @unique
+  emailVerified       DateTime?
+  image               String?
+  password            String?
+  preferences         String?
+  onboardingCompleted Boolean         @default(false)
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+  accounts            Account[]
+  savedProperties     SavedProperty[]
+  sessions            Session[]
+}
+
+model Account {
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([provider, providerAccountId])
+}
+
+model Session {
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@id([identifier, token])
+}
+
+model AgentLog {
+  id        String   @id @default(cuid())
+  agentName String
+  action    String
+  details   String?
+  createdAt DateTime @default(now())
+}
