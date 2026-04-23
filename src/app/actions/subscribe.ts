@@ -21,13 +21,13 @@ export async function subscribe(formData: FormData) {
 
         // Header if file doesn't exist
         if (!fs.existsSync(filePath)) {
-            fs.writeFileSync(filePath, "Email,Timestamp\n");
+            fs.writeFileSync(filePath, "Email,Timestamp\n", "utf8");
         }
 
         // Append email and timestamp
         const timestamp = new Date().toISOString();
         const row = `${email},${timestamp}\n`;
-        fs.appendFileSync(filePath, row);
+        fs.appendFileSync(filePath, row, "utf8");
 
         return { success: true };
     } catch (error) {

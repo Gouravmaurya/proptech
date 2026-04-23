@@ -25,7 +25,7 @@ export async function contact(formData: FormData) {
 
         // Header if file doesn't exist
         if (!fs.existsSync(filePath)) {
-            fs.writeFileSync(filePath, "FirstName,LastName,Email,InquiryType,Message,Timestamp\n");
+            fs.writeFileSync(filePath, "FirstName,LastName,Email,InquiryType,Message,Timestamp\n", "utf8");
         }
 
         // Sanitize message and other fields for CSV (remove newlines and commas)
@@ -40,7 +40,7 @@ export async function contact(formData: FormData) {
             new Date().toISOString()
         ].join(",") + "\n";
 
-        fs.appendFileSync(filePath, row);
+        fs.appendFileSync(filePath, row, "utf8");
 
         return { success: true };
     } catch (error) {
