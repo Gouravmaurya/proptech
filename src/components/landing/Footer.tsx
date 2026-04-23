@@ -18,19 +18,19 @@ import {
 /* ── Nav columns — only real existing routes ── */
 const navColumns = [
     {
-        label: "Platform",
+        label: "Company",
         links: [
-            { name: "Dashboard",       href: "/dashboard" },
-            { name: "Browse Properties", href: "/properties" },
-            { name: "Get Started",     href: "/onboarding" },
+            { name: "About Us",    href: "/about" },
+            { name: "Pricing",     href: "/pricing" },
+            { name: "Contact",     href: "/contact" },
         ],
     },
     {
-        label: "Legal",
+        label: "Product",
         links: [
-            { name: "Terms & Conditions", href: "/terms" },
-            { name: "Privacy Policy",     href: "/privacy" },
-            { name: "Cookie Policy",      href: "/privacy#cookies" },
+            { name: "How it Works",    href: "/#features" },
+            { name: "Market Insights", href: "/#insights" },
+            { name: "Why Proptech",    href: "/#why-proptech" },
         ],
     },
 ];
@@ -81,7 +81,7 @@ export default function Footer() {
             <div className="relative max-w-7xl mx-auto px-6">
 
                 {/* ── Stats strip ── */}
-                {/* <div className="grid grid-cols-2 md:grid-cols-4 border-b border-zinc-800/60">
+                <div className="grid grid-cols-2 md:grid-cols-4 border-b border-zinc-800/60">
                     {stats.map(({ icon: Icon, label, value }, i) => (
                         <motion.div
                             key={label}
@@ -98,7 +98,7 @@ export default function Footer() {
                             <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-medium text-center px-2">{label}</span>
                         </motion.div>
                     ))}
-                </div> */}
+                </div>
 
                 {/* ── Main body ── */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 py-16 border-b border-zinc-800/60">
@@ -114,9 +114,9 @@ export default function Footer() {
                         {/* Logo */}
                         <Link href="/" className="inline-flex items-center gap-3 group mb-5">
                             <div className="w-9 h-9 rounded-xl bg-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-600/20 group-hover:bg-emerald-500 transition-colors duration-300">
-                                <span className="text-white font-bold text-sm">H</span>
+                                <span className="text-white font-bold text-sm">P</span>
                             </div>
-                            <span className="font-heading text-2xl text-white tracking-tight">Haven</span>
+                            <span className="font-heading text-2xl text-white tracking-tight">Proptech</span>
                             <span className="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/20 tracking-widest">
                                 BETA
                             </span>
@@ -200,7 +200,7 @@ export default function Footer() {
                 >
                     {/* Left: copyright + status */}
                     <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-1.5 text-[11px] text-zinc-600 font-light">
-                        <span>© {new Date().getFullYear()} Haven. All rights reserved.</span>
+                        <span>© {new Date().getFullYear()} Proptech. All rights reserved.</span>
                         <span className="hidden md:inline w-px h-3 bg-zinc-800" />
                         <span className="inline-flex items-center gap-1.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -211,11 +211,7 @@ export default function Footer() {
                     {/* Right: legal links + scroll-to-top */}
                     <div className="flex items-center gap-5">
                         <div className="flex items-center gap-4 text-[11px] text-zinc-500">
-                            <Link href="/terms"   className="hover:text-emerald-400 transition-colors">Terms</Link>
-                            <span className="w-px h-3 bg-zinc-800" />
-                            <Link href="/privacy" className="hover:text-emerald-400 transition-colors">Privacy</Link>
-                            <span className="hidden md:inline w-px h-3 bg-zinc-800" />
-                            <span className="hidden md:inline text-zinc-600">Made with ♥ for investors</span>
+                            <span className="text-zinc-600">Made with ♥ for investors</span>
                         </div>
                         <button
                             onClick={scrollToTop}

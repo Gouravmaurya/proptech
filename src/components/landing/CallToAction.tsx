@@ -1,17 +1,42 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle2 } from "lucide-react";
+import { subscribe } from "@/app/actions/subscribe";
 
 export default function CallToAction() {
     const containerRef = useRef<HTMLElement>(null);
     const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end end"] });
+    
+    const [email, setEmail] = useState("");
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [message, setMessage] = useState("");
 
     const scale = useTransform(scrollYProgress, [0, 1], [0.93, 1]);
     const y = useTransform(scrollYProgress, [0, 1], [40, 0]);
     const blob1Y = useTransform(scrollYProgress, [0, 1], [-60, 60]);
     const blob2Y = useTransform(scrollYProgress, [0, 1], [60, -60]);
+
+    async function handleSubmit(e: React.FormEvent) {
+        e.preventDefault();
+        if (!email) return;
+
+        setStatus("loading");
+        const formData = new FormData();
+        formData.append("email", email);
+
+        const result = await subscribe(formData);
+
+        if (result.success) {
+            setStatus("success");
+            setEmail("");
+            setMessage("Thank you! You've been added to our list.");
+        } else {
+            setStatus("error");
+            setMessage(result.error || "Something went wrong.");
+        }
+    }
 
     return (
         <section ref={containerRef} className="relative py-24 md:py-32 overflow-hidden bg-white">
@@ -39,7 +64,7 @@ export default function CallToAction() {
                             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-sm"
                         >
                             <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse shadow-md shadow-emerald-400/50" />
-                            <span className="text-[10px] font-bold text-emerald-200/90 tracking-[0.15em] uppercase">HAVEN</span>
+                            <span className="text-[10px] font-bold text-emerald-200/90 tracking-[0.15em] uppercase">PROPTECH</span>
                         </motion.div>
 
                         {/* Heading */}
@@ -65,27 +90,49 @@ export default function CallToAction() {
                         </motion.p>
 
                         {/* Email Input Capsule */}
-                        {/* <motion.div 
+                        <motion.div 
                             initial={{ opacity: 0, y: 20 }} 
                             whileInView={{ opacity: 1, y: 0 }} 
                             viewport={{ once: true }} 
                             transition={{ delay: 0.3, duration: 0.6 }}
-                            className="bg-white rounded-full p-1.5 flex flex-col sm:flex-row items-center w-full max-w-md mx-auto shadow-2xl shadow-emerald-950/40 mb-5 gap-2 sm:gap-0"
+                            className="w-full max-w-md mx-auto mb-5"
                         >
-                            <div className="hidden sm:flex pl-4 pr-3 text-slate-400 font-bold border-r border-slate-100 mr-2 h-6 items-center">
-                                H
-                            </div>
-                            <input 
-                                type="email" 
-                                placeholder="Your email address" 
-                                className="w-full sm:flex-1 bg-transparent px-4 sm:px-2 py-3 sm:py-0 text-slate-900 placeholder:text-slate-400 focus:outline-none text-sm font-medium" 
-                            />
-                            <button 
-                                className="w-full sm:w-auto bg-[#022c22] text-white px-7 py-3 rounded-full font-bold text-sm tracking-wide hover:bg-emerald-900 transition-colors whitespace-nowrap shadow-lg shadow-emerald-950/10 flex items-center justify-center gap-1.5 group"
-                            >
-                                <span>Start Exploring</span>
-                            </button>
-                        </motion.div> */}
+                            {status === "success" ? (
+                                <motion.div 
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl py-4 px-6 flex items-center gap-3 text-emerald-300"
+                                >
+                                    <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                                    <span className="text-sm font-medium">{message}</span>
+                                </motion.div>
+                            ) : (
+                                <form onSubmit={handleSubmit} className="bg-white rounded-full p-1.5 flex flex-col sm:flex-row items-center shadow-2xl shadow-emerald-950/40 gap-2 sm:gap-0">
+                                    <div className="hidden sm:flex pl-4 pr-3 text-slate-400 font-bold border-r border-slate-100 mr-2 h-6 items-center">
+                                        P
+                                    </div>
+                                    <input 
+                                        type="email" 
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="Your email address" 
+                                        className="w-full sm:flex-1 bg-transparent px-4 sm:px-2 py-3 sm:py-0 text-slate-900 placeholder:text-slate-400 focus:outline-none text-sm font-medium" 
+                                    />
+                                    <button 
+                                        type="submit"
+                                        disabled={status === "loading"}
+                                        className="w-full sm:w-auto bg-[#022c22] text-white px-7 py-3 rounded-full font-bold text-sm tracking-wide hover:bg-emerald-900 transition-all whitespace-nowrap shadow-lg shadow-emerald-950/10 flex items-center justify-center gap-1.5 group disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        <span>{status === "loading" ? "Subscribing..." : "Start Exploring"}</span>
+                                        {status !== "loading" && <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />}
+                                    </button>
+                                </form>
+                            )}
+                            {status === "error" && (
+                                <p className="text-rose-400 text-[10px] mt-3 font-medium uppercase tracking-wider">{message}</p>
+                            )}
+                        </motion.div>
 
                         {/* Bottom Disclaimer */}
                         <motion.p 

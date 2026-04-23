@@ -13,6 +13,17 @@
   --font-serif: var(--font-serif);
 }
 
+@layer base {
+  .dark {
+    --color-background: #09090B;
+    --color-surface: #18181B;
+    --color-primary: #FAFAFA;
+    --color-accent: #10B981;
+    --color-foreground: #FAFAFA;
+    --color-muted: #A1A1AA;
+  }
+}
+
 /* ───────── KEYFRAMES ───────── */
 @keyframes shimmer {
   0% {

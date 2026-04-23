@@ -35,7 +35,7 @@ export async function generateOutreachDraft({
     try {
         // Draft content (Premium template)
         const subject = `Inquiry: Investment Opportunity - ${title}`;
-        const bodyContent = `Dear listing representative,\n\nI am reaching out regarding ${title} ($${price.toLocaleString()}). Based on our platform's AI analysis, this property aligns well with our investment criteria.\n\nCould you please provide the following details:\n1. T12 financial records and current rent roll.\n2. Details on any major capital expenditures in the last 24 months.\n3. Seller's timeline and any current offers on the table.\n\nLooking forward to hearing from you.\n\nBest regards,\nHaven Acquisition Team`;
+        const bodyContent = `Dear listing representative,\n\nI am reaching out regarding ${title} ($${price.toLocaleString()}). Based on our platform's AI analysis, this property aligns well with our investment criteria.\n\nCould you please provide the following details:\n1. T12 financial records and current rent roll.\n2. Details on any major capital expenditures in the last 24 months.\n3. Seller's timeline and any current offers on the table.\n\nLooking forward to hearing from you.\n\nBest regards,\nProptech Acquisition Team`;
 
         const [outreach] = await Promise.all([
             prisma.outreach.create({

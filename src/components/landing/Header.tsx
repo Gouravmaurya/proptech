@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
+
+
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -27,10 +29,10 @@ export default function Header() {
     }, [isMenuOpen]);
 
     const navLinks = [
-        { name: "How it Works", href: "#features" },
-        { name: "Why Haven", href: "#why-haven" },
-        { name: "Stories", href: "#testimonials" },
-        { name: "FAQ", href: "#faq" },
+        { name: "How it Works", href: "/#features" },
+        { name: "About", href: "/about" },
+        { name: "Pricing", href: "/pricing" },
+        { name: "Contact", href: "/contact" },
     ];
 
     return (
@@ -44,7 +46,7 @@ export default function Header() {
                 isMenuOpen 
                     ? 'bg-transparent border-transparent shadow-none' 
                     : scrolled
-                        ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-stone-200/30 border border-stone-200/50'
+                        ? 'bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl shadow-lg shadow-stone-200/30 dark:shadow-black/20 border border-stone-200/50 dark:border-zinc-800/50'
                         : 'bg-transparent border border-white/10'
                 }`}>
                 <Link 
@@ -54,9 +56,9 @@ export default function Header() {
                     }`}
                 >
                     <div className="w-8 h-8 rounded-xl bg-emerald-500 flex items-center justify-center group-hover:bg-emerald-600 transition-colors duration-300">
-                        <span className="text-white font-bold text-sm">H</span>
+                        <span className="text-white font-bold text-sm">P</span>
                     </div>
-                    <span className="font-heading text-xl tracking-tight text-zinc-900">Haven</span>
+                    <span className="font-heading text-xl tracking-tight text-zinc-900 dark:text-white">Proptech</span>
                 </Link>
 
                 <div className={`hidden md:flex items-center gap-1 transition-opacity duration-300 ${
@@ -67,8 +69,8 @@ export default function Header() {
                             key={link.name}
                             href={link.href}
                             className={`relative text-sm font-medium px-4 py-2 rounded-lg transition-all duration-500 group ${scrolled
-                                    ? 'text-stone-600 hover:text-zinc-900 hover:bg-stone-100/60'
-                                    : 'text-stone-600 hover:text-zinc-900 hover:bg-stone-100/10'
+                                    ? 'text-stone-600 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-white hover:bg-stone-100/60 dark:hover:bg-zinc-800/60'
+                                    : 'text-stone-600 dark:text-stone-300 hover:text-zinc-900 dark:hover:text-white hover:bg-stone-100/10'
                                 }`}
                         >
                             {link.name}
@@ -81,9 +83,9 @@ export default function Header() {
                     isMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
                 }`}>
                     <Link
-                        href="/dashboard"
+                        href="#features"
                         className={`text-sm font-bold px-5 py-2.5 rounded-xl transition-all duration-300 ${scrolled
-                                ? 'bg-zinc-900 text-white hover:bg-emerald-600'
+                                ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-emerald-600 dark:hover:bg-emerald-500 dark:hover:text-white'
                                 : 'bg-white text-zinc-900 hover:bg-emerald-500 hover:text-white'
                             }`}
                     >
@@ -113,7 +115,7 @@ export default function Header() {
                                 </motion.div>
                             ))}
                             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-                                <Link href="/dashboard" onClick={() => setIsMenuOpen(false)} className="inline-flex mt-4 px-8 py-3 bg-zinc-900 text-white rounded-xl text-lg font-medium">Get Started</Link>
+                                <Link href="#features" onClick={() => setIsMenuOpen(false)} className="inline-flex mt-4 px-8 py-3 bg-zinc-900 text-white rounded-xl text-lg font-medium">Get Started</Link>
                             </motion.div>
                         </div>
                     </motion.div>

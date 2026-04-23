@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
-    { q: "How is Haven different from Zillow or Redfin?", a: "Traditional platforms show what's already on the market. Haven finds off-market opportunities, runs AI-powered due diligence, and provides predictive analytics — think of it as a private fund analyst that works 24/7." },
+    { q: "How is Proptech different from Zillow or Redfin?", a: "Traditional platforms show what's already on the market. Proptech finds off-market opportunities, runs AI-powered due diligence, and provides predictive analytics — think of it as a private fund analyst that works 24/7." },
     { q: "How accurate are your predictive models?", a: "Our models maintain 98% accuracy on 12-month projections, verified against historical outcomes. We use 847 data points per property and simulate 10,000 scenarios to give you Likely, Bear, and Bull case projections." },
     { q: "What markets do you cover?", a: "We currently cover 50+ high-growth markets across the US, with new markets added monthly. Our agents scan 4,000+ sources daily to identify emerging opportunities before they become mainstream." },
-    { q: "Do I need real estate experience?", a: "Not at all. Haven was designed to make institutional-grade analysis accessible to everyone. Our AI explains every metric in plain language and flags exactly what you need to know before making a decision." },
-    { q: "What does it cost?", a: "Haven offers a free 14-day trial with full access. After that, plans start at $49/month for individual investors. We never charge commissions or take a cut of your deals." },
+    { q: "Do I need real estate experience?", a: "Not at all. Proptech was designed to make institutional-grade analysis accessible to everyone. Our AI explains every metric in plain language and flags exactly what you need to know before making a decision." },
+    { q: "What does it cost?", a: "Proptech offers a free 14-day trial with full access. After that, plans start at $49/month for individual investors. We never charge commissions or take a cut of your deals." },
 ];
 
 export default function FAQ() {
